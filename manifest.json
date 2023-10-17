@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
-    "name": "YouTube Link Modifier",
+    "name": "YouTube Redirect",
     "version": "1.0",
-    "description": "Modifies YouTube watch links",
+    "description": "Redirects YouTube video links",
     "icons": {
       "16": "icons/icon.png",
       "48": "icons/icon.png",
