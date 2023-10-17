@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
-    "name": "YouTube Redirect",
+    "name": "YouTube Ad-Free Redirect",
     "version": "1.0",
-    "description": "Redirects YouTube video links",
+    "description": "Redirects YouTube video links to no ads regular video page",
     "icons": {
       "16": "icons/icon.png",
       "48": "icons/icon.png",
