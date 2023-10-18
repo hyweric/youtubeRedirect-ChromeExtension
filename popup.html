@@ -3,27 +3,22 @@
 <head>
   <title>YouTube Redirect</title>
   <style>
-    /* Add this line to use the Roboto font from Google Fonts */
     @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
     body {
-      width: 300px;
+      width: 500px;
       padding: 20px;
-      /* Change the font-family to Roboto */
       font-family: 'Roboto', sans-serif;
     }
 
     h2 {
-      /* Change the color to black */
       color: #000;
       font-size: 24px;
-      /* Add some spacing below the heading */
       margin-bottom: 20px;
       font-weight: 200;
     }
 
     p {
-      /* Change the color to black */
       color: #000;
       font-size: 16px;
       margin: 10px 0;
@@ -35,37 +30,84 @@
       padding: 20px;
       border-radius: 10px;
     }
+  
 
-    #toggleButton {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: red; /* default color */
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 18px;
-    }
 
-    /* Add this CSS for the icon */
-    .icon {
-        height: 24px; 
-        width: 24px; 
-        display:inline-block; 
-        background:url('icons/icon.png') no-repeat; 
-        background-size: contain; 
-        margin-left:10px; 
-    }
-    
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+/* Rounded sliders */
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Add a span with class icon after the title -->
     <h2>YouTube Redirect</h2>
     <p>This extension automatically redirects YouTube watch links.</p>
-    <p> Reload site to activate.</p>
-    <div id="toggleButton">Disable</div> 
+    <p> Reload site to activate if redirected on youtube.</p>
+
+    <label class="switch">
+        <input type="checkbox" id="toggleButton">
+        <span class="slider round"></span>
+    </label>
+      <span id="statusLabel"></span>
+      
+       
   </div>
 
   <script src="popup.js"></script>

@@ -2,8 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var toggleButton = document.getElementById('toggleButton');
     var toggleText = document.getElementById('toggleText');
     
-    // Set initial state
-    toggleButton.checked = true;
+    toggleButton.checked = true; // default
     toggleText.textContent = 'Enabled';
   
     toggleButton.addEventListener('change', function() {
