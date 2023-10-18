@@ -12,25 +12,30 @@
     }
 
     h2 {
+      margin-top: 0;
+      margin-bottom: 13px;
       color: #000;
-      font-size: 24px;
-      margin-bottom: 20px;
-      font-weight: 200;
+      font: 400 24px/28px 'Roboto', sans-serif;
+      font-weight: bold;
+      letter-spacing: 0.4px;
     }
 
     p {
       color: #000;
-      font-size: 16px;
+      font-size: 18px;
       margin: 10px 0;
+    }
+    hr {
+      margin-top: 0px;
+      margin-bottom: 10px;
     }
 
     .container {
-      background-color: #f5f5f5;
-      border: 1px solid #ccc;
-      padding: 20px;
-      border-radius: 10px;
+      background-color: #ffffff;
+      border: 5 px solid #ffffff;
+      padding: 0 px;
+      border-radius: 5 px;
     }
-
 
 
   .switch {
@@ -53,7 +58,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #ff8f8f; /* switch off col*/
     -webkit-transition: .3s;
     transition: .3s; /* kool anim duration */
   }
@@ -71,11 +76,11 @@
   }
 
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #26db3f; 
   }
 
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #26db3f; 
   }
 
   input:checked + .slider:before {
@@ -103,6 +108,7 @@ border-radius: 50%;
   font-size: 25px;
   font-weight: bold;
   color: #000;
+  text-align: center;
 }
 
 
@@ -111,6 +117,7 @@ border-radius: 50%;
 <body>
   <div class="container">
     <h2>YouTube Redirect</h2>
+    <hr>
     <p>Redirects YouTube watch links to Embed Version.</p>
     <p> Reload site to activate when redirected from YT Homepage.</p>
 
@@ -121,7 +128,6 @@ border-radius: 50%;
       </label>
       <span id="statusLabel"></span>
     </div>
-      <span id="statusLabel"></span>
       
        
   </div>
