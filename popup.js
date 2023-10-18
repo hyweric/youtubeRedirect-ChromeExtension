@@ -1,31 +1,25 @@
-document.getElementById('toggleButton').addEventListener('click', function() {
-    let button = document.getElementById('toggleButton');
+document.getElementById('toggleButton').addEventListener('change', function() {
+        let toggleSwitch = document.getElementById('toggleButton');
+        let statusLabel = document.getElementById('statusLabel');
     
-    chrome.storage.sync.get('enabled', function(data) {
-      let enabled = !data.enabled; // toggle
-      chrome.storage.sync.set({enabled: enabled});
-  
-      if (enabled) {
-        button.textContent = 'Disable';
-        button.style.backgroundColor = 'red';
-      } else {
-        button.textContent = 'Enable';
-        button.style.backgroundColor = 'green';
-      }
+        chrome.storage.sync.get('enabled', function(data) {
+            let enabled = !data.enabled; // toggle
+            chrome.storage.sync.set({enabled: enabled});
+    
+            toggleSwitch.checked = enabled; //pos of switch
+            statusLabel.textContent = enabled ? 'Enabled' : 'Disabled'; //status symbol text 
+            statusLabel.style.color = enabled ? '#00CC66' : 'red'; //status symbol color 
+        });
     });
-  });
   
   window.onload = function() {
-    let button = document.getElementById('toggleButton');
-    
+    let toggleSwitch = document.getElementById('toggleButton');
+    let statusLabel = document.getElementById('statusLabel');
+  
     chrome.storage.sync.get('enabled', function(data) {
-      if (data.enabled) {
-        button.textContent = 'Disable';
-        button.style.backgroundColor = 'red';
-      } else {
-        button.textContent = 'Enable';
-        button.style.backgroundColor = 'green';
-      }
+      toggleSwitch.checked = data.enabled; 
+      statusLabel.textContent = data.enabled ? 'Enabled' : 'Disabled'; 
+      statusLabel.style.color = data.enabled ? '#00CC66' : 'red'; 
     });
   };
   
