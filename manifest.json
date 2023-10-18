@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "YouTube Ad-Free Redirect",
   "version": "1.0",
-  "description": "Redirects YouTube video links to no ads regular video page",
+  "description": "Redirects YouTube watch links to Embed Version.",
   "icons": {
     "16": "icons/icon.png",
     "48": "icons/icon.png",

@@ -6,7 +6,7 @@
     @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
     body {
-      width: 500px;
+      width: 480px;
       padding: 20px;
       font-family: 'Roboto', sans-serif;
     }
@@ -30,7 +30,7 @@
       padding: 20px;
       border-radius: 10px;
     }
-  
+
 
 
   .switch {
@@ -54,8 +54,8 @@
     right: 0;
     bottom: 0;
     background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: .3s;
+    transition: .3s; /* kool anim duration */
   }
 
   .slider:before {
@@ -66,8 +66,8 @@
     left: 4px;
     bottom: 4px;
     background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: .3s;
+    transition: .3s;
   }
 
   input:checked + .slider {
@@ -90,21 +90,37 @@ border-radius: 34px;
 }
 
 .slider.round:before {
-border-radius: 50%;
+border-radius: 50%; 
 }
+.switch-container {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+#statusLabel {
+  margin-left: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #000;
+}
+
 
   </style>
 </head>
 <body>
   <div class="container">
     <h2>YouTube Redirect</h2>
-    <p>This extension automatically redirects YouTube watch links.</p>
-    <p> Reload site to activate if redirected on youtube.</p>
+    <p>Redirects YouTube watch links to Embed Version.</p>
+    <p> Reload site to activate when redirected from YT Homepage.</p>
 
-    <label class="switch">
+    <div class="switch-container">
+      <label class="switch">
         <input type="checkbox" id="toggleButton">
         <span class="slider round"></span>
-    </label>
+      </label>
+      <span id="statusLabel"></span>
+    </div>
       <span id="statusLabel"></span>
       
        
