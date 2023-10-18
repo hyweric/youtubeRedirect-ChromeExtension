@@ -3,19 +3,28 @@
 <head>
   <title>YouTube Redirect</title>
   <style>
+    /* Add this line to use the Roboto font from Google Fonts */
+    @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
     body {
       width: 300px;
       padding: 20px;
-      font-family: Verdana, Helvetica, sans-serif;
+      /* Change the font-family to Roboto */
+      font-family: 'Roboto', sans-serif;
     }
 
     h2 {
-      color: #ff5733;
+      /* Change the color to black */
+      color: #000;
       font-size: 24px;
+      /* Add some spacing below the heading */
+      margin-bottom: 20px;
+      font-weight: 200;
     }
 
     p {
-      color: #333;
+      /* Change the color to black */
+      color: #000;
       font-size: 16px;
       margin: 10px 0;
     }
@@ -35,16 +44,28 @@
       color: white;
       border-radius: 5px;
       cursor: pointer;
+      font-size: 18px;
     }
 
+    /* Add this CSS for the icon */
+    .icon {
+        height: 24px; 
+        width: 24px; 
+        display:inline-block; 
+        background:url('icons/icon.png') no-repeat; 
+        background-size: contain; 
+        margin-left:10px; 
+    }
+    
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Add a span with class icon after the title -->
     <h2>YouTube Redirect</h2>
     <p>This extension automatically redirects YouTube watch links.</p>
     <p> Reload site to activate.</p>
-    <div id="toggleButton">Disable</div> <!-- default text -->
+    <div id="toggleButton">Disable</div> 
   </div>
 
   <script src="popup.js"></script>
