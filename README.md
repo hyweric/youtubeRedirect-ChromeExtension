@@ -5,9 +5,9 @@ The extension changes youtube.com links to youtube-nocookie.com embed links.
 
 
 Features
-✔️ Toggle On or Off
-❌ No more Ads 
-🎧 Less Distractions (Removes sidebar, header, etc)  
+- Toggle On or Off ✔️ 
+- No more Ads ❌ 
+- Less Distractions (Removes sidebar, header, etc) 
 
 | Regular Youtube | Redirected Link |
 | --- | --- |
