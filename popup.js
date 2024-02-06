@@ -22,4 +22,3 @@ document.getElementById('toggleButton').addEventListener('change', function() {
       statusLabel.style.color = data.enabled ? '#00CC66' : 'red'; 
     });
   };
-  

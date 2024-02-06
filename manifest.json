@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "YouTube Redirect Distraction Free",
   "version": "1.0",
   "description": "Redirects YouTube watch links to No Cookie Version.",
@@ -8,19 +8,22 @@
     "48": "icons/icon.png",
     "128": "icons/icon.png"
   },
-  "content_scripts": [
-    {
-      "matches": ["https://www.youtube.com/watch*"],
-      "js": ["content.js"]
-    }
-  ],
-  "permissions": ["webNavigation", "storage"],
-  "browser_action": {
+  "permissions": ["storage", "scripting"],
+  "action": {
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon.png",
       "48": "icons/icon.png",
       "128": "icons/icon.png"
     }
-  }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": ["content.js"]
+    }
+  ]
 }
